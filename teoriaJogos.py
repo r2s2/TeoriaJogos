@@ -44,14 +44,17 @@ def recompensas(a,b):
         pontos_jogador_b += pontos_traem
 
 
-    
+
+# Jogador A - Olho por olho e B aleatório    
 for i in range(iteracoes):
     # Jogador A
     jogada_a = estrategiaOlhoPorOlhoA(jogadas_jogador_a, jogadas_jogador_b)
     # Jogador B
     jogada_b = random.choice(['C', 'T'])    
     recompensas(jogada_a, jogada_b)
-    print(f'Rodada {i+1}: A = {jogada_a}, B = {jogada_b}. Pontos:  A: {pontos_jogador_a}, B: {pontos_jogador_b}')
+    # print(f'Rodada {i+1}: A = {jogada_a}, B = {jogada_b}. Pontos:  A: {pontos_jogador_a}, B: {pontos_jogador_b}')
 
-print(f'Pontos jogador A - Olho por olho: {pontos_jogador_a}')
-print(f'Pontos jogador B - aleatório: {pontos_jogador_b}')
+
+
+
+print(f'A - olho por olho e B - aleatório: A={pontos_jogador_a}; B={pontos_jogador_b}. {iteracoes} rodadas.')
